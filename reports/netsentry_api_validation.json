@@ -1,0 +1,2486 @@
+{
+  "api_url": "http://127.0.0.1:8085",
+  "samples_per_class": 15,
+  "results": [
+    {
+      "traffic_type": "BENIGN",
+      "expected_binary": "BENIGN",
+      "total": 15,
+      "valid_samples": 15,
+      "api_errors": 0,
+      "binary_correct": 15,
+      "binary_accuracy": 1.0,
+      "attack_detected": 0,
+      "detection_rate": null,
+      "type_correct": 0,
+      "type_evaluated": 0,
+      "type_accuracy": null,
+      "unknown_unseen": 0,
+      "known_type_detected": 0,
+      "samples": [
+        {
+          "sample": 1,
+          "expected_binary": "BENIGN",
+          "expected_attack_type": "BENIGN",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 1.0,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        },
+        {
+          "sample": 2,
+          "expected_binary": "BENIGN",
+          "expected_attack_type": "BENIGN",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 1.0,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        },
+        {
+          "sample": 3,
+          "expected_binary": "BENIGN",
+          "expected_attack_type": "BENIGN",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 1.0,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        },
+        {
+          "sample": 4,
+          "expected_binary": "BENIGN",
+          "expected_attack_type": "BENIGN",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 1.0,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        },
+        {
+          "sample": 5,
+          "expected_binary": "BENIGN",
+          "expected_attack_type": "BENIGN",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 1.0,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        },
+        {
+          "sample": 6,
+          "expected_binary": "BENIGN",
+          "expected_attack_type": "BENIGN",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 1.0,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        },
+        {
+          "sample": 7,
+          "expected_binary": "BENIGN",
+          "expected_attack_type": "BENIGN",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 0.751919,
+          "type_confidence": null,
+          "risk_level": "MEDIUM"
+        },
+        {
+          "sample": 8,
+          "expected_binary": "BENIGN",
+          "expected_attack_type": "BENIGN",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 1.0,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        },
+        {
+          "sample": 9,
+          "expected_binary": "BENIGN",
+          "expected_attack_type": "BENIGN",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 1.0,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        },
+        {
+          "sample": 10,
+          "expected_binary": "BENIGN",
+          "expected_attack_type": "BENIGN",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 1.0,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        },
+        {
+          "sample": 11,
+          "expected_binary": "BENIGN",
+          "expected_attack_type": "BENIGN",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 1.0,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        },
+        {
+          "sample": 12,
+          "expected_binary": "BENIGN",
+          "expected_attack_type": "BENIGN",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 1.0,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        },
+        {
+          "sample": 13,
+          "expected_binary": "BENIGN",
+          "expected_attack_type": "BENIGN",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 1.0,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        },
+        {
+          "sample": 14,
+          "expected_binary": "BENIGN",
+          "expected_attack_type": "BENIGN",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 0.998609,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        },
+        {
+          "sample": 15,
+          "expected_binary": "BENIGN",
+          "expected_attack_type": "BENIGN",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 1.0,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        }
+      ]
+    },
+    {
+      "traffic_type": "DoS Hulk",
+      "expected_binary": "ATTACK",
+      "total": 15,
+      "valid_samples": 15,
+      "api_errors": 0,
+      "binary_correct": 15,
+      "binary_accuracy": 1.0,
+      "attack_detected": 15,
+      "detection_rate": 1.0,
+      "type_correct": 14,
+      "type_evaluated": 15,
+      "type_accuracy": 0.9333333333333333,
+      "unknown_unseen": 0,
+      "known_type_detected": 15,
+      "samples": [
+        {
+          "sample": 1,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Hulk",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Hulk",
+          "binary_confidence": 1.0,
+          "type_confidence": 0.990038,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 2,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Hulk",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Hulk",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 3,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Hulk",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Hulk",
+          "binary_confidence": 0.999925,
+          "type_confidence": 0.998015,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 4,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Hulk",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Hulk",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 5,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Hulk",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Hulk",
+          "binary_confidence": 0.987686,
+          "type_confidence": 0.982621,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 6,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Hulk",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Hulk",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 7,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Hulk",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Hulk",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 8,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Hulk",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Hulk",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 9,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Hulk",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Hulk",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 10,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Hulk",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Hulk",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 11,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Hulk",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Hulk",
+          "binary_confidence": 0.949837,
+          "type_confidence": 0.973715,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 12,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Hulk",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Hulk",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 13,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Hulk",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Hulk",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 14,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Hulk",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Hulk",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 15,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Hulk",
+          "prediction": "ATTACK",
+          "attack_type": "DoS GoldenEye",
+          "binary_confidence": 0.654643,
+          "type_confidence": 0.515973,
+          "risk_level": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "traffic_type": "PortScan",
+      "expected_binary": "ATTACK",
+      "total": 15,
+      "valid_samples": 15,
+      "api_errors": 0,
+      "binary_correct": 14,
+      "binary_accuracy": 0.9333333333333333,
+      "attack_detected": 14,
+      "detection_rate": 0.9333333333333333,
+      "type_correct": 14,
+      "type_evaluated": 15,
+      "type_accuracy": 0.9333333333333333,
+      "unknown_unseen": 0,
+      "known_type_detected": 14,
+      "samples": [
+        {
+          "sample": 1,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "PortScan",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 0.925491,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        },
+        {
+          "sample": 2,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "PortScan",
+          "prediction": "ATTACK",
+          "attack_type": "PortScan",
+          "binary_confidence": 0.999576,
+          "type_confidence": 0.999951,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 3,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "PortScan",
+          "prediction": "ATTACK",
+          "attack_type": "PortScan",
+          "binary_confidence": 0.999383,
+          "type_confidence": 0.999947,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 4,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "PortScan",
+          "prediction": "ATTACK",
+          "attack_type": "PortScan",
+          "binary_confidence": 0.999552,
+          "type_confidence": 0.999956,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 5,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "PortScan",
+          "prediction": "ATTACK",
+          "attack_type": "PortScan",
+          "binary_confidence": 0.99971,
+          "type_confidence": 0.999967,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 6,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "PortScan",
+          "prediction": "ATTACK",
+          "attack_type": "PortScan",
+          "binary_confidence": 0.999284,
+          "type_confidence": 0.999976,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 7,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "PortScan",
+          "prediction": "ATTACK",
+          "attack_type": "PortScan",
+          "binary_confidence": 0.999981,
+          "type_confidence": 0.999965,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 8,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "PortScan",
+          "prediction": "ATTACK",
+          "attack_type": "PortScan",
+          "binary_confidence": 0.999975,
+          "type_confidence": 0.999964,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 9,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "PortScan",
+          "prediction": "ATTACK",
+          "attack_type": "PortScan",
+          "binary_confidence": 0.999977,
+          "type_confidence": 0.999968,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 10,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "PortScan",
+          "prediction": "ATTACK",
+          "attack_type": "PortScan",
+          "binary_confidence": 0.999978,
+          "type_confidence": 0.999956,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 11,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "PortScan",
+          "prediction": "ATTACK",
+          "attack_type": "PortScan",
+          "binary_confidence": 0.999981,
+          "type_confidence": 0.999968,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 12,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "PortScan",
+          "prediction": "ATTACK",
+          "attack_type": "PortScan",
+          "binary_confidence": 0.999981,
+          "type_confidence": 0.999956,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 13,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "PortScan",
+          "prediction": "ATTACK",
+          "attack_type": "PortScan",
+          "binary_confidence": 0.999981,
+          "type_confidence": 0.999968,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 14,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "PortScan",
+          "prediction": "ATTACK",
+          "attack_type": "PortScan",
+          "binary_confidence": 0.998412,
+          "type_confidence": 0.999947,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 15,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "PortScan",
+          "prediction": "ATTACK",
+          "attack_type": "PortScan",
+          "binary_confidence": 0.999914,
+          "type_confidence": 0.794708,
+          "risk_level": "CRITICAL"
+        }
+      ]
+    },
+    {
+      "traffic_type": "DDoS",
+      "expected_binary": "ATTACK",
+      "total": 15,
+      "valid_samples": 15,
+      "api_errors": 0,
+      "binary_correct": 15,
+      "binary_accuracy": 1.0,
+      "attack_detected": 15,
+      "detection_rate": 1.0,
+      "type_correct": 15,
+      "type_evaluated": 15,
+      "type_accuracy": 1.0,
+      "unknown_unseen": 0,
+      "known_type_detected": 15,
+      "samples": [
+        {
+          "sample": 1,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DDoS",
+          "prediction": "ATTACK",
+          "attack_type": "DDoS",
+          "binary_confidence": 0.999996,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 2,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DDoS",
+          "prediction": "ATTACK",
+          "attack_type": "DDoS",
+          "binary_confidence": 0.999996,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 3,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DDoS",
+          "prediction": "ATTACK",
+          "attack_type": "DDoS",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 4,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DDoS",
+          "prediction": "ATTACK",
+          "attack_type": "DDoS",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 5,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DDoS",
+          "prediction": "ATTACK",
+          "attack_type": "DDoS",
+          "binary_confidence": 0.999996,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 6,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DDoS",
+          "prediction": "ATTACK",
+          "attack_type": "DDoS",
+          "binary_confidence": 0.999996,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 7,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DDoS",
+          "prediction": "ATTACK",
+          "attack_type": "DDoS",
+          "binary_confidence": 0.999996,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 8,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DDoS",
+          "prediction": "ATTACK",
+          "attack_type": "DDoS",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 9,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DDoS",
+          "prediction": "ATTACK",
+          "attack_type": "DDoS",
+          "binary_confidence": 0.999999,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 10,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DDoS",
+          "prediction": "ATTACK",
+          "attack_type": "DDoS",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 11,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DDoS",
+          "prediction": "ATTACK",
+          "attack_type": "DDoS",
+          "binary_confidence": 0.999999,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 12,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DDoS",
+          "prediction": "ATTACK",
+          "attack_type": "DDoS",
+          "binary_confidence": 0.999996,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 13,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DDoS",
+          "prediction": "ATTACK",
+          "attack_type": "DDoS",
+          "binary_confidence": 0.999996,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 14,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DDoS",
+          "prediction": "ATTACK",
+          "attack_type": "DDoS",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 15,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DDoS",
+          "prediction": "ATTACK",
+          "attack_type": "DDoS",
+          "binary_confidence": 0.999701,
+          "type_confidence": 0.999763,
+          "risk_level": "CRITICAL"
+        }
+      ]
+    },
+    {
+      "traffic_type": "DoS GoldenEye",
+      "expected_binary": "ATTACK",
+      "total": 15,
+      "valid_samples": 15,
+      "api_errors": 0,
+      "binary_correct": 15,
+      "binary_accuracy": 1.0,
+      "attack_detected": 15,
+      "detection_rate": 1.0,
+      "type_correct": 15,
+      "type_evaluated": 15,
+      "type_accuracy": 1.0,
+      "unknown_unseen": 0,
+      "known_type_detected": 15,
+      "samples": [
+        {
+          "sample": 1,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS GoldenEye",
+          "prediction": "ATTACK",
+          "attack_type": "DoS GoldenEye",
+          "binary_confidence": 0.994025,
+          "type_confidence": 0.969796,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 2,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS GoldenEye",
+          "prediction": "ATTACK",
+          "attack_type": "DoS GoldenEye",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 3,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS GoldenEye",
+          "prediction": "ATTACK",
+          "attack_type": "DoS GoldenEye",
+          "binary_confidence": 0.998351,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 4,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS GoldenEye",
+          "prediction": "ATTACK",
+          "attack_type": "DoS GoldenEye",
+          "binary_confidence": 0.999346,
+          "type_confidence": 0.999902,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 5,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS GoldenEye",
+          "prediction": "ATTACK",
+          "attack_type": "DoS GoldenEye",
+          "binary_confidence": 0.998351,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 6,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS GoldenEye",
+          "prediction": "ATTACK",
+          "attack_type": "DoS GoldenEye",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 7,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS GoldenEye",
+          "prediction": "ATTACK",
+          "attack_type": "DoS GoldenEye",
+          "binary_confidence": 0.99912,
+          "type_confidence": 0.999857,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 8,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS GoldenEye",
+          "prediction": "ATTACK",
+          "attack_type": "DoS GoldenEye",
+          "binary_confidence": 0.996649,
+          "type_confidence": 0.999853,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 9,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS GoldenEye",
+          "prediction": "ATTACK",
+          "attack_type": "DoS GoldenEye",
+          "binary_confidence": 1.0,
+          "type_confidence": 0.995305,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 10,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS GoldenEye",
+          "prediction": "ATTACK",
+          "attack_type": "DoS GoldenEye",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 11,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS GoldenEye",
+          "prediction": "ATTACK",
+          "attack_type": "DoS GoldenEye",
+          "binary_confidence": 0.999024,
+          "type_confidence": 0.999891,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 12,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS GoldenEye",
+          "prediction": "ATTACK",
+          "attack_type": "DoS GoldenEye",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 13,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS GoldenEye",
+          "prediction": "ATTACK",
+          "attack_type": "DoS GoldenEye",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 14,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS GoldenEye",
+          "prediction": "ATTACK",
+          "attack_type": "DoS GoldenEye",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 15,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS GoldenEye",
+          "prediction": "ATTACK",
+          "attack_type": "DoS GoldenEye",
+          "binary_confidence": 0.991982,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        }
+      ]
+    },
+    {
+      "traffic_type": "FTP-Patator",
+      "expected_binary": "ATTACK",
+      "total": 15,
+      "valid_samples": 15,
+      "api_errors": 0,
+      "binary_correct": 15,
+      "binary_accuracy": 1.0,
+      "attack_detected": 15,
+      "detection_rate": 1.0,
+      "type_correct": 14,
+      "type_evaluated": 15,
+      "type_accuracy": 0.9333333333333333,
+      "unknown_unseen": 0,
+      "known_type_detected": 15,
+      "samples": [
+        {
+          "sample": 1,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "FTP-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - XSS",
+          "binary_confidence": 0.987868,
+          "type_confidence": 0.672353,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 2,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "FTP-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "FTP-Patator",
+          "binary_confidence": 0.99999,
+          "type_confidence": 0.999994,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 3,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "FTP-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "FTP-Patator",
+          "binary_confidence": 0.999999,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 4,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "FTP-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "FTP-Patator",
+          "binary_confidence": 0.998726,
+          "type_confidence": 0.999947,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 5,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "FTP-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "FTP-Patator",
+          "binary_confidence": 0.999999,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 6,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "FTP-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "FTP-Patator",
+          "binary_confidence": 0.999999,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 7,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "FTP-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "FTP-Patator",
+          "binary_confidence": 0.999999,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 8,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "FTP-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "FTP-Patator",
+          "binary_confidence": 0.999999,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 9,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "FTP-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "FTP-Patator",
+          "binary_confidence": 0.99999,
+          "type_confidence": 0.999994,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 10,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "FTP-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "FTP-Patator",
+          "binary_confidence": 0.99999,
+          "type_confidence": 0.999994,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 11,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "FTP-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "FTP-Patator",
+          "binary_confidence": 0.999999,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 12,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "FTP-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "FTP-Patator",
+          "binary_confidence": 0.961783,
+          "type_confidence": 0.983408,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 13,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "FTP-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "FTP-Patator",
+          "binary_confidence": 0.999999,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 14,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "FTP-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "FTP-Patator",
+          "binary_confidence": 0.998726,
+          "type_confidence": 0.999947,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 15,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "FTP-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "FTP-Patator",
+          "binary_confidence": 0.858461,
+          "type_confidence": 0.915068,
+          "risk_level": "HIGH"
+        }
+      ]
+    },
+    {
+      "traffic_type": "SSH-Patator",
+      "expected_binary": "ATTACK",
+      "total": 15,
+      "valid_samples": 15,
+      "api_errors": 0,
+      "binary_correct": 15,
+      "binary_accuracy": 1.0,
+      "attack_detected": 15,
+      "detection_rate": 1.0,
+      "type_correct": 15,
+      "type_evaluated": 15,
+      "type_accuracy": 1.0,
+      "unknown_unseen": 0,
+      "known_type_detected": 15,
+      "samples": [
+        {
+          "sample": 1,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "SSH-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "SSH-Patator",
+          "binary_confidence": 0.648774,
+          "type_confidence": 0.652913,
+          "risk_level": "MEDIUM"
+        },
+        {
+          "sample": 2,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "SSH-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "SSH-Patator",
+          "binary_confidence": 0.983676,
+          "type_confidence": 0.994086,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 3,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "SSH-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "SSH-Patator",
+          "binary_confidence": 0.986383,
+          "type_confidence": 0.91001,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 4,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "SSH-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "SSH-Patator",
+          "binary_confidence": 0.997149,
+          "type_confidence": 0.994286,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 5,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "SSH-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "SSH-Patator",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 6,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "SSH-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "SSH-Patator",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 7,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "SSH-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "SSH-Patator",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 8,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "SSH-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "SSH-Patator",
+          "binary_confidence": 0.98523,
+          "type_confidence": 0.995903,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 9,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "SSH-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "SSH-Patator",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 10,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "SSH-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "SSH-Patator",
+          "binary_confidence": 0.98523,
+          "type_confidence": 0.995903,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 11,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "SSH-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "SSH-Patator",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 12,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "SSH-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "SSH-Patator",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 13,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "SSH-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "SSH-Patator",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 14,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "SSH-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "SSH-Patator",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 15,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "SSH-Patator",
+          "prediction": "ATTACK",
+          "attack_type": "SSH-Patator",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        }
+      ]
+    },
+    {
+      "traffic_type": "DoS Slowhttptest",
+      "expected_binary": "ATTACK",
+      "total": 15,
+      "valid_samples": 15,
+      "api_errors": 0,
+      "binary_correct": 15,
+      "binary_accuracy": 1.0,
+      "attack_detected": 15,
+      "detection_rate": 1.0,
+      "type_correct": 15,
+      "type_evaluated": 15,
+      "type_accuracy": 1.0,
+      "unknown_unseen": 0,
+      "known_type_detected": 15,
+      "samples": [
+        {
+          "sample": 1,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Slowhttptest",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Slowhttptest",
+          "binary_confidence": 0.696369,
+          "type_confidence": 0.718216,
+          "risk_level": "MEDIUM"
+        },
+        {
+          "sample": 2,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Slowhttptest",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Slowhttptest",
+          "binary_confidence": 0.998373,
+          "type_confidence": 0.99999,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 3,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Slowhttptest",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Slowhttptest",
+          "binary_confidence": 0.995,
+          "type_confidence": 0.998071,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 4,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Slowhttptest",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Slowhttptest",
+          "binary_confidence": 0.999961,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 5,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Slowhttptest",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Slowhttptest",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 6,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Slowhttptest",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Slowhttptest",
+          "binary_confidence": 0.998645,
+          "type_confidence": 0.999989,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 7,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Slowhttptest",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Slowhttptest",
+          "binary_confidence": 0.995835,
+          "type_confidence": 0.999965,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 8,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Slowhttptest",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Slowhttptest",
+          "binary_confidence": 0.999933,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 9,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Slowhttptest",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Slowhttptest",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 10,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Slowhttptest",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Slowhttptest",
+          "binary_confidence": 0.996877,
+          "type_confidence": 0.999989,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 11,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Slowhttptest",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Slowhttptest",
+          "binary_confidence": 0.998568,
+          "type_confidence": 0.999989,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 12,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Slowhttptest",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Slowhttptest",
+          "binary_confidence": 1.0,
+          "type_confidence": 0.996072,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 13,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Slowhttptest",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Slowhttptest",
+          "binary_confidence": 0.997088,
+          "type_confidence": 0.99999,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 14,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Slowhttptest",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Slowhttptest",
+          "binary_confidence": 0.999006,
+          "type_confidence": 0.999991,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 15,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS Slowhttptest",
+          "prediction": "ATTACK",
+          "attack_type": "DoS Slowhttptest",
+          "binary_confidence": 0.59501,
+          "type_confidence": 0.657973,
+          "risk_level": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "traffic_type": "DoS slowloris",
+      "expected_binary": "ATTACK",
+      "total": 15,
+      "valid_samples": 15,
+      "api_errors": 0,
+      "binary_correct": 15,
+      "binary_accuracy": 1.0,
+      "attack_detected": 15,
+      "detection_rate": 1.0,
+      "type_correct": 15,
+      "type_evaluated": 15,
+      "type_accuracy": 1.0,
+      "unknown_unseen": 0,
+      "known_type_detected": 15,
+      "samples": [
+        {
+          "sample": 1,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS slowloris",
+          "prediction": "ATTACK",
+          "attack_type": "DoS slowloris",
+          "binary_confidence": 0.572069,
+          "type_confidence": 0.512579,
+          "risk_level": "MEDIUM"
+        },
+        {
+          "sample": 2,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS slowloris",
+          "prediction": "ATTACK",
+          "attack_type": "DoS slowloris",
+          "binary_confidence": 1.0,
+          "type_confidence": 0.998706,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 3,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS slowloris",
+          "prediction": "ATTACK",
+          "attack_type": "DoS slowloris",
+          "binary_confidence": 0.999366,
+          "type_confidence": 0.999864,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 4,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS slowloris",
+          "prediction": "ATTACK",
+          "attack_type": "DoS slowloris",
+          "binary_confidence": 0.999366,
+          "type_confidence": 0.999787,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 5,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS slowloris",
+          "prediction": "ATTACK",
+          "attack_type": "DoS slowloris",
+          "binary_confidence": 1.0,
+          "type_confidence": 0.999948,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 6,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS slowloris",
+          "prediction": "ATTACK",
+          "attack_type": "DoS slowloris",
+          "binary_confidence": 0.998971,
+          "type_confidence": 0.999977,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 7,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS slowloris",
+          "prediction": "ATTACK",
+          "attack_type": "DoS slowloris",
+          "binary_confidence": 0.999366,
+          "type_confidence": 0.999864,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 8,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS slowloris",
+          "prediction": "ATTACK",
+          "attack_type": "DoS slowloris",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 9,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS slowloris",
+          "prediction": "ATTACK",
+          "attack_type": "DoS slowloris",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 10,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS slowloris",
+          "prediction": "ATTACK",
+          "attack_type": "DoS slowloris",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 11,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS slowloris",
+          "prediction": "ATTACK",
+          "attack_type": "DoS slowloris",
+          "binary_confidence": 0.999366,
+          "type_confidence": 0.890024,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 12,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS slowloris",
+          "prediction": "ATTACK",
+          "attack_type": "DoS slowloris",
+          "binary_confidence": 1.0,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 13,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS slowloris",
+          "prediction": "ATTACK",
+          "attack_type": "DoS slowloris",
+          "binary_confidence": 0.999366,
+          "type_confidence": 0.999864,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 14,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS slowloris",
+          "prediction": "ATTACK",
+          "attack_type": "DoS slowloris",
+          "binary_confidence": 0.999366,
+          "type_confidence": 0.999897,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 15,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "DoS slowloris",
+          "prediction": "ATTACK",
+          "attack_type": "DoS slowloris",
+          "binary_confidence": 0.875573,
+          "type_confidence": 0.705474,
+          "risk_level": "HIGH"
+        }
+      ]
+    },
+    {
+      "traffic_type": "Bot",
+      "expected_binary": "ATTACK",
+      "total": 15,
+      "valid_samples": 15,
+      "api_errors": 0,
+      "binary_correct": 10,
+      "binary_accuracy": 0.6666666666666666,
+      "attack_detected": 10,
+      "detection_rate": 0.6666666666666666,
+      "type_correct": 10,
+      "type_evaluated": 15,
+      "type_accuracy": 0.6666666666666666,
+      "unknown_unseen": 0,
+      "known_type_detected": 10,
+      "samples": [
+        {
+          "sample": 1,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Bot",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 1.0,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        },
+        {
+          "sample": 2,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Bot",
+          "prediction": "ATTACK",
+          "attack_type": "Bot",
+          "binary_confidence": 0.999992,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 3,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Bot",
+          "prediction": "ATTACK",
+          "attack_type": "Bot",
+          "binary_confidence": 0.999992,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 4,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Bot",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 0.775997,
+          "type_confidence": null,
+          "risk_level": "MEDIUM"
+        },
+        {
+          "sample": 5,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Bot",
+          "prediction": "ATTACK",
+          "attack_type": "Bot",
+          "binary_confidence": 0.999992,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 6,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Bot",
+          "prediction": "ATTACK",
+          "attack_type": "Bot",
+          "binary_confidence": 0.902885,
+          "type_confidence": 0.993116,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 7,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Bot",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 0.923495,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        },
+        {
+          "sample": 8,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Bot",
+          "prediction": "ATTACK",
+          "attack_type": "Bot",
+          "binary_confidence": 0.77469,
+          "type_confidence": 0.976244,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 9,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Bot",
+          "prediction": "ATTACK",
+          "attack_type": "Bot",
+          "binary_confidence": 0.999992,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 10,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Bot",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 0.976146,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        },
+        {
+          "sample": 11,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Bot",
+          "prediction": "ATTACK",
+          "attack_type": "Bot",
+          "binary_confidence": 0.746032,
+          "type_confidence": 0.95545,
+          "risk_level": "MEDIUM"
+        },
+        {
+          "sample": 12,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Bot",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 0.487561,
+          "type_confidence": null,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 13,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Bot",
+          "prediction": "ATTACK",
+          "attack_type": "Bot",
+          "binary_confidence": 0.692235,
+          "type_confidence": 0.999953,
+          "risk_level": "MEDIUM"
+        },
+        {
+          "sample": 14,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Bot",
+          "prediction": "ATTACK",
+          "attack_type": "Bot",
+          "binary_confidence": 0.763209,
+          "type_confidence": 0.998466,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 15,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Bot",
+          "prediction": "ATTACK",
+          "attack_type": "Bot",
+          "binary_confidence": 0.781046,
+          "type_confidence": 0.999962,
+          "risk_level": "HIGH"
+        }
+      ]
+    },
+    {
+      "traffic_type": "Web Attack - Brute Force",
+      "expected_binary": "ATTACK",
+      "total": 15,
+      "valid_samples": 15,
+      "api_errors": 0,
+      "binary_correct": 14,
+      "binary_accuracy": 0.9333333333333333,
+      "attack_detected": 14,
+      "detection_rate": 0.9333333333333333,
+      "type_correct": 12,
+      "type_evaluated": 15,
+      "type_accuracy": 0.8,
+      "unknown_unseen": 0,
+      "known_type_detected": 14,
+      "samples": [
+        {
+          "sample": 1,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Brute Force",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 0.969168,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        },
+        {
+          "sample": 2,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Brute Force",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Brute Force",
+          "binary_confidence": 0.961332,
+          "type_confidence": 0.636077,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 3,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Brute Force",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Brute Force",
+          "binary_confidence": 0.96824,
+          "type_confidence": 0.954766,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 4,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Brute Force",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - XSS",
+          "binary_confidence": 0.987599,
+          "type_confidence": 0.500102,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 5,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Brute Force",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Brute Force",
+          "binary_confidence": 0.982276,
+          "type_confidence": 0.65247,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 6,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Brute Force",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Brute Force",
+          "binary_confidence": 0.984708,
+          "type_confidence": 0.656989,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 7,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Brute Force",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Brute Force",
+          "binary_confidence": 0.993983,
+          "type_confidence": 1.0,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 8,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Brute Force",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Brute Force",
+          "binary_confidence": 0.940239,
+          "type_confidence": 0.881419,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 9,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Brute Force",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Brute Force",
+          "binary_confidence": 0.985241,
+          "type_confidence": 0.975178,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 10,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Brute Force",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Brute Force",
+          "binary_confidence": 0.985576,
+          "type_confidence": 0.680815,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 11,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Brute Force",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Brute Force",
+          "binary_confidence": 0.987059,
+          "type_confidence": 0.814617,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 12,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Brute Force",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Brute Force",
+          "binary_confidence": 0.972103,
+          "type_confidence": 0.91065,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 13,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Brute Force",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Brute Force",
+          "binary_confidence": 0.984195,
+          "type_confidence": 0.662019,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 14,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Brute Force",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - XSS",
+          "binary_confidence": 0.955412,
+          "type_confidence": 0.512785,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 15,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Brute Force",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Brute Force",
+          "binary_confidence": 0.606655,
+          "type_confidence": 0.419322,
+          "risk_level": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "traffic_type": "Web Attack - XSS",
+      "expected_binary": "ATTACK",
+      "total": 15,
+      "valid_samples": 15,
+      "api_errors": 0,
+      "binary_correct": 14,
+      "binary_accuracy": 0.9333333333333333,
+      "attack_detected": 14,
+      "detection_rate": 0.9333333333333333,
+      "type_correct": 13,
+      "type_evaluated": 15,
+      "type_accuracy": 0.8666666666666667,
+      "unknown_unseen": 0,
+      "known_type_detected": 14,
+      "samples": [
+        {
+          "sample": 1,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - XSS",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - XSS",
+          "binary_confidence": 0.887517,
+          "type_confidence": 0.548237,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 2,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - XSS",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - XSS",
+          "binary_confidence": 0.990766,
+          "type_confidence": 0.693478,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 3,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - XSS",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - XSS",
+          "binary_confidence": 0.992783,
+          "type_confidence": 0.763995,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 4,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - XSS",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - XSS",
+          "binary_confidence": 0.991409,
+          "type_confidence": 0.715982,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 5,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - XSS",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - XSS",
+          "binary_confidence": 0.99008,
+          "type_confidence": 0.683228,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 6,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - XSS",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - XSS",
+          "binary_confidence": 0.99445,
+          "type_confidence": 0.644454,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 7,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - XSS",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - XSS",
+          "binary_confidence": 0.988796,
+          "type_confidence": 0.741415,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 8,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - XSS",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - XSS",
+          "binary_confidence": 0.988425,
+          "type_confidence": 0.671301,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 9,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - XSS",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - XSS",
+          "binary_confidence": 0.964218,
+          "type_confidence": 0.83212,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 10,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - XSS",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - XSS",
+          "binary_confidence": 0.988212,
+          "type_confidence": 0.620449,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 11,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - XSS",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - XSS",
+          "binary_confidence": 0.988613,
+          "type_confidence": 0.689269,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 12,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - XSS",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - XSS",
+          "binary_confidence": 0.980642,
+          "type_confidence": 0.706268,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 13,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - XSS",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - XSS",
+          "binary_confidence": 0.98371,
+          "type_confidence": 0.69941,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 14,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - XSS",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Brute Force",
+          "binary_confidence": 0.975466,
+          "type_confidence": 0.524261,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 15,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - XSS",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 0.98596,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        }
+      ]
+    },
+    {
+      "traffic_type": "Infiltration",
+      "expected_binary": "ATTACK",
+      "total": 15,
+      "valid_samples": 15,
+      "api_errors": 0,
+      "binary_correct": 8,
+      "binary_accuracy": 0.5333333333333333,
+      "attack_detected": 8,
+      "detection_rate": 0.5333333333333333,
+      "type_correct": 8,
+      "type_evaluated": 15,
+      "type_accuracy": 0.5333333333333333,
+      "unknown_unseen": 0,
+      "known_type_detected": 8,
+      "samples": [
+        {
+          "sample": 1,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Infiltration",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 0.458215,
+          "type_confidence": null,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 2,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Infiltration",
+          "prediction": "ATTACK",
+          "attack_type": "Infiltration",
+          "binary_confidence": 0.893344,
+          "type_confidence": 0.803908,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 3,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Infiltration",
+          "prediction": "ATTACK",
+          "attack_type": "Infiltration",
+          "binary_confidence": 0.861544,
+          "type_confidence": 0.849112,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 4,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Infiltration",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 0.464971,
+          "type_confidence": null,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 5,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Infiltration",
+          "prediction": "ATTACK",
+          "attack_type": "Infiltration",
+          "binary_confidence": 0.700467,
+          "type_confidence": 0.959956,
+          "risk_level": "MEDIUM"
+        },
+        {
+          "sample": 6,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Infiltration",
+          "prediction": "ATTACK",
+          "attack_type": "Infiltration",
+          "binary_confidence": 0.82666,
+          "type_confidence": 0.969988,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 7,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Infiltration",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 1.0,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        },
+        {
+          "sample": 8,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Infiltration",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 0.951232,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        },
+        {
+          "sample": 9,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Infiltration",
+          "prediction": "ATTACK",
+          "attack_type": "Infiltration",
+          "binary_confidence": 0.95067,
+          "type_confidence": 0.989995,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 10,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Infiltration",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 0.722278,
+          "type_confidence": null,
+          "risk_level": "MEDIUM"
+        },
+        {
+          "sample": 11,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Infiltration",
+          "prediction": "ATTACK",
+          "attack_type": "Infiltration",
+          "binary_confidence": 0.84164,
+          "type_confidence": 0.819936,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 12,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Infiltration",
+          "prediction": "ATTACK",
+          "attack_type": "Infiltration",
+          "binary_confidence": 0.870309,
+          "type_confidence": 0.92992,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 13,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Infiltration",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 0.463646,
+          "type_confidence": null,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 14,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Infiltration",
+          "prediction": "ATTACK",
+          "attack_type": "Infiltration",
+          "binary_confidence": 0.867259,
+          "type_confidence": 0.929977,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 15,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Infiltration",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 0.900074,
+          "type_confidence": null,
+          "risk_level": "LOW"
+        }
+      ]
+    },
+    {
+      "traffic_type": "Heartbleed",
+      "expected_binary": "ATTACK",
+      "total": 11,
+      "valid_samples": 11,
+      "api_errors": 0,
+      "binary_correct": 10,
+      "binary_accuracy": 0.9090909090909091,
+      "attack_detected": 10,
+      "detection_rate": 0.9090909090909091,
+      "type_correct": 10,
+      "type_evaluated": 11,
+      "type_accuracy": 0.9090909090909091,
+      "unknown_unseen": 0,
+      "known_type_detected": 10,
+      "samples": [
+        {
+          "sample": 1,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Heartbleed",
+          "prediction": "ATTACK",
+          "attack_type": "Heartbleed",
+          "binary_confidence": 0.664513,
+          "type_confidence": 0.824986,
+          "risk_level": "MEDIUM"
+        },
+        {
+          "sample": 2,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Heartbleed",
+          "prediction": "ATTACK",
+          "attack_type": "Heartbleed",
+          "binary_confidence": 0.914479,
+          "type_confidence": 0.979983,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 3,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Heartbleed",
+          "prediction": "ATTACK",
+          "attack_type": "Heartbleed",
+          "binary_confidence": 0.816205,
+          "type_confidence": 0.909983,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 4,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Heartbleed",
+          "prediction": "ATTACK",
+          "attack_type": "Heartbleed",
+          "binary_confidence": 0.815275,
+          "type_confidence": 0.899989,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 5,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Heartbleed",
+          "prediction": "ATTACK",
+          "attack_type": "Heartbleed",
+          "binary_confidence": 0.95097,
+          "type_confidence": 0.974986,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 6,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Heartbleed",
+          "prediction": "ATTACK",
+          "attack_type": "Heartbleed",
+          "binary_confidence": 0.971287,
+          "type_confidence": 0.989985,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 7,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Heartbleed",
+          "prediction": "ATTACK",
+          "attack_type": "Heartbleed",
+          "binary_confidence": 0.955989,
+          "type_confidence": 0.989985,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 8,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Heartbleed",
+          "prediction": "ATTACK",
+          "attack_type": "Heartbleed",
+          "binary_confidence": 0.735843,
+          "type_confidence": 0.859986,
+          "risk_level": "MEDIUM"
+        },
+        {
+          "sample": 9,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Heartbleed",
+          "prediction": "ATTACK",
+          "attack_type": "Heartbleed",
+          "binary_confidence": 0.809337,
+          "type_confidence": 0.939982,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 10,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Heartbleed",
+          "prediction": "ATTACK",
+          "attack_type": "Heartbleed",
+          "binary_confidence": 0.767137,
+          "type_confidence": 0.869986,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 11,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Heartbleed",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 0.509971,
+          "type_confidence": null,
+          "risk_level": "HIGH"
+        }
+      ]
+    },
+    {
+      "traffic_type": "Web Attack - Sql Injection",
+      "expected_binary": "ATTACK",
+      "total": 15,
+      "valid_samples": 15,
+      "api_errors": 0,
+      "binary_correct": 11,
+      "binary_accuracy": 0.7333333333333333,
+      "attack_detected": 11,
+      "detection_rate": 0.7333333333333333,
+      "type_correct": 8,
+      "type_evaluated": 15,
+      "type_accuracy": 0.5333333333333333,
+      "unknown_unseen": 0,
+      "known_type_detected": 11,
+      "samples": [
+        {
+          "sample": 1,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Sql Injection",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Sql Injection",
+          "binary_confidence": 0.671381,
+          "type_confidence": 0.69962,
+          "risk_level": "MEDIUM"
+        },
+        {
+          "sample": 2,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Sql Injection",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Sql Injection",
+          "binary_confidence": 0.782805,
+          "type_confidence": 0.645574,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 3,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Sql Injection",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 0.721442,
+          "type_confidence": null,
+          "risk_level": "MEDIUM"
+        },
+        {
+          "sample": 4,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Sql Injection",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Sql Injection",
+          "binary_confidence": 0.659972,
+          "type_confidence": 0.744909,
+          "risk_level": "MEDIUM"
+        },
+        {
+          "sample": 5,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Sql Injection",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Sql Injection",
+          "binary_confidence": 0.917957,
+          "type_confidence": 0.80659,
+          "risk_level": "CRITICAL"
+        },
+        {
+          "sample": 6,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Sql Injection",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Brute Force",
+          "binary_confidence": 0.644123,
+          "type_confidence": 0.350946,
+          "risk_level": "MEDIUM"
+        },
+        {
+          "sample": 7,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Sql Injection",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 0.525067,
+          "type_confidence": null,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 8,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Sql Injection",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Sql Injection",
+          "binary_confidence": 0.763198,
+          "type_confidence": 0.814885,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 9,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Sql Injection",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Brute Force",
+          "binary_confidence": 0.882278,
+          "type_confidence": 0.819544,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 10,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Sql Injection",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Sql Injection",
+          "binary_confidence": 0.803224,
+          "type_confidence": 0.86988,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 11,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Sql Injection",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 0.656243,
+          "type_confidence": null,
+          "risk_level": "HIGH"
+        },
+        {
+          "sample": 12,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Sql Injection",
+          "prediction": "BENIGN",
+          "attack_type": "BENIGN",
+          "binary_confidence": 0.81248,
+          "type_confidence": null,
+          "risk_level": "MEDIUM"
+        },
+        {
+          "sample": 13,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Sql Injection",
+          "prediction": "ATTACK",
+          "attack_type": "DoS GoldenEye",
+          "binary_confidence": 0.597986,
+          "type_confidence": 0.829806,
+          "risk_level": "MEDIUM"
+        },
+        {
+          "sample": 14,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Sql Injection",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Sql Injection",
+          "binary_confidence": 0.6038,
+          "type_confidence": 0.584922,
+          "risk_level": "MEDIUM"
+        },
+        {
+          "sample": 15,
+          "expected_binary": "ATTACK",
+          "expected_attack_type": "Web Attack - Sql Injection",
+          "prediction": "ATTACK",
+          "attack_type": "Web Attack - Sql Injection",
+          "binary_confidence": 0.803633,
+          "type_confidence": 0.619645,
+          "risk_level": "HIGH"
+        }
+      ]
+    }
+  ]
+}

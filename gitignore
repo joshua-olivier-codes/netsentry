@@ -1,0 +1,22 @@
+# Data
+data/raw/
+data/processed/
+*.csv
+
+# Trained models / artifacts
+models/*.joblib
+
+# Reports produced by validation runs
+reports/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
