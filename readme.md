@@ -149,7 +149,7 @@ Flow IAT Mean
 Flow IAT Std
 Flow IAT Max
 Flow IAT Min
-Fwd IATTotal
+Fwd IAT Total
 Fwd IAT Mean
 Fwd IAT Std
 Fwd IAT Max
@@ -157,7 +157,7 @@ Fwd IAT Min
 Bwd IAT Total
 Bwd IAT Mean
 Bwd IAT Std
-Bwd IATMax
+Bwd IAT Max
 Bwd IAT Min
 Fwd PSH Flags
 Fwd URG Flags
@@ -383,7 +383,7 @@ The API is designed to run locally and does not include a frontend.
 ## Endpoints
 
 | Method | Endpoint       | Description                     |
-| ------ | -------------- | ------------------------------- |
+| ------ | -------------- | -------------------------------- |
 | `GET`  | `/`            | Service information             |
 | `GET`  | `/health`      | API/model health check          |
 | `GET`  | `/api/model`   | Model and schema information    |
@@ -676,7 +676,6 @@ python src/evaluate_production.py
 
 ```text
 NETSENTRY/
-|
 |-- data/
 |   |-- raw/
 |   |   `-- MachineLearningCVE/
@@ -711,6 +710,8 @@ NETSENTRY/
 |-- requirements.txt
 `-- README.md
 ```
+
+> **Note:** `data/`, `models/*.joblib`, and `.venv/` are excluded from version control (see `.gitignore`). Regenerate `data/` via `src/preprocess.py` and the models via `src/train_production.py`, or obtain the artifacts separately.
 
 ---
 
