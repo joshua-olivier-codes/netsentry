@@ -35,6 +35,7 @@ from flask import Flask, jsonify, request
 #   GET  /health
 #   GET  /api/model
 #   POST /api/predict
+#   POST /api/predict/batch
 #
 # =========================================================
 
@@ -78,6 +79,10 @@ BINARY_ATTACK_THRESHOLD = float(os.getenv("NETSENTRY_ATTACK_THRESHOLD", "0.55"))
 
 # Stage 2 threshold
 UNKNOWN_TYPE_THRESHOLD = float(os.getenv("NETSENTRY_UNKNOWN_THRESHOLD", "0.30"))
+
+
+# Largest batch accepted by /api/predict/batch
+MAX_BATCH_RECORDS = int(os.getenv("NETSENTRY_MAX_BATCH", "5000"))
 
 
 # =========================================================
@@ -229,22 +234,15 @@ def normalize_class(value):
     return text
 
 
-def get_binary_probabilities(X):
+def binary_probabilities_from_row(probabilities, classes):
     """
-    Return:
+    Resolve one row of predict_proba output into:
 
-        {
-            "BENIGN": probability,
-            "ATTACK": probability
-        }
+        (benign_probability, attack_probability, probability_map)
 
-    regardless of whether the underlying model stores
-    classes as integers or strings.
+    Kept separate from the model call so single and batch
+    prediction share exactly one copy of this logic.
     """
-
-    probabilities = binary_model.predict_proba(X)[0]
-
-    classes = list(binary_model.classes_)
 
     probability_map = {}
 
@@ -283,6 +281,24 @@ def get_binary_probabilities(X):
         attack_probability = probability_map["ATTACK"]
 
     return (benign_probability, attack_probability, probability_map)
+
+
+def get_binary_probabilities(X):
+    """
+    Return:
+
+        {
+            "BENIGN": probability,
+            "ATTACK": probability
+        }
+
+    regardless of whether the underlying model stores
+    classes as integers or strings.
+    """
+
+    return binary_probabilities_from_row(
+        binary_model.predict_proba(X)[0], list(binary_model.classes_)
+    )
 
 
 # =========================================================
@@ -337,22 +353,12 @@ def validate_required_features(features, feature_names):
     return missing
 
 
-def prepare_input(features, feature_names):
+def feature_values(cleaned, feature_names):
     """
-    Convert API JSON into a model-ready DataFrame.
+    Order a cleaned feature dict into the model's feature order.
 
-    Every required production feature must be present.
-
-    Non-numeric values and NaN/Infinity are converted to 0.
+    Non-numeric and non-finite values become 0.0.
     """
-
-    cleaned = clean_features(features)
-
-    missing = validate_required_features(cleaned, feature_names)
-
-    if missing:
-
-        raise ValueError("Missing binary model features: " + ", ".join(missing))
 
     values = []
 
@@ -374,9 +380,66 @@ def prepare_input(features, feature_names):
 
         values.append(value)
 
+    return values
+
+
+def prepare_input(features, feature_names):
+    """
+    Convert API JSON into a model-ready DataFrame.
+
+    Every required production feature must be present.
+
+    Non-numeric values and NaN/Infinity are converted to 0.
+    """
+
+    cleaned = clean_features(features)
+
+    missing = validate_required_features(cleaned, feature_names)
+
+    if missing:
+
+        raise ValueError("Missing binary model features: " + ", ".join(missing))
+
+    values = feature_values(cleaned, feature_names)
+
     X = pd.DataFrame([values], columns=feature_names)
 
     return X
+
+
+def prepare_batch(records, feature_names):
+    """
+    Convert a list of API feature objects into one model-ready DataFrame.
+
+    Building a single frame for the whole batch is the point of this
+    function: per-record DataFrame construction costs more than the
+    prediction itself.
+
+    Every record must carry every required production feature. The error
+    names the offending record so a large batch is debuggable.
+    """
+
+    rows = []
+
+    for index, features in enumerate(records):
+
+        if not isinstance(features, dict):
+
+            raise ValueError(f"Record {index} must be a JSON object.")
+
+        cleaned = clean_features(features)
+
+        missing = validate_required_features(cleaned, feature_names)
+
+        if missing:
+
+            raise ValueError(
+                f"Record {index} is missing features: " + ", ".join(missing)
+            )
+
+        rows.append(feature_values(cleaned, feature_names))
+
+    return pd.DataFrame(rows, columns=feature_names)
 
 
 # =========================================================
@@ -449,21 +512,18 @@ def get_risk_level(prediction, confidence):
 # =========================================================
 
 
-def predict_attack_type(X):
+def attack_type_from_row(probabilities, classes):
     """
-    Stage 2 multiclass prediction.
-
-    Returns:
+    Resolve one row of multiclass predict_proba output into:
 
         attack_type
         attack_type_prediction
         attack_type_confidence
         attack_type_probabilities
+
+    Kept separate from the model call so single and batch
+    prediction share exactly one copy of this logic.
     """
-
-    probabilities = multiclass_model.predict_proba(X)[0]
-
-    classes = list(multiclass_model.classes_)
 
     attack_index = int(np.argmax(probabilities))
 
@@ -509,6 +569,23 @@ def predict_attack_type(X):
     )
 
 
+def predict_attack_type(X):
+    """
+    Stage 2 multiclass prediction.
+
+    Returns:
+
+        attack_type
+        attack_type_prediction
+        attack_type_confidence
+        attack_type_probabilities
+    """
+
+    return attack_type_from_row(
+        multiclass_model.predict_proba(X)[0], list(multiclass_model.classes_)
+    )
+
+
 # =========================================================
 # ROOT ENDPOINT
 # =========================================================
@@ -540,6 +617,7 @@ def home():
                 "health": "/health",
                 "model": "/api/model",
                 "predict": ("POST /api/predict"),
+                "predict_batch": ("POST /api/predict/batch"),
             },
         }
     )
@@ -798,6 +876,225 @@ def predict():
         return jsonify({"error": ("Internal prediction error.")}), 500
 
 
+
+# =========================================================
+# BATCH PREDICTION API
+# =========================================================
+
+
+@app.route("/api/predict/batch", methods=["POST"])
+def predict_batch():
+
+    try:
+
+        # =================================================
+        # REQUEST VALIDATION
+        # =================================================
+
+        if not request.is_json:
+
+            return jsonify({"error": ("Request must contain " "JSON data.")}), 400
+
+        payload = request.get_json(silent=True)
+
+        if not isinstance(payload, dict):
+
+            return jsonify({"error": ("Request body must be " "a JSON object.")}), 400
+
+        if "records" not in payload:
+
+            return jsonify({"error": ("Missing 'records' array.")}), 400
+
+        records = payload["records"]
+
+        if not isinstance(records, list):
+
+            return jsonify({"error": ("'records' must be an array.")}), 400
+
+        if not records:
+
+            return jsonify({"error": ("'records' must not be empty.")}), 400
+
+        if len(records) > MAX_BATCH_RECORDS:
+
+            return (
+                jsonify(
+                    {
+                        "error": (
+                            f"Batch of {len(records)} records exceeds "
+                            f"the limit of {MAX_BATCH_RECORDS}."
+                        )
+                    }
+                ),
+                413,
+            )
+
+        # Stage 2 probabilities are one float per attack class per record,
+        # which dominates the payload on a large batch. Opt in.
+        include_type_probabilities = bool(payload.get("include_type_probabilities"))
+
+        # =================================================
+        # STAGE 1
+        # ONE PREDICTION CALL FOR THE WHOLE BATCH
+        # =================================================
+
+        binary_X = prepare_batch(records, binary_feature_names)
+
+        binary_probabilities = binary_model.predict_proba(binary_X)
+
+        binary_classes = list(binary_model.classes_)
+
+        resolved = []
+
+        attack_positions = []
+
+        for position in range(len(records)):
+
+            benign_probability, attack_probability, probability_map = (
+                binary_probabilities_from_row(
+                    binary_probabilities[position], binary_classes
+                )
+            )
+
+            is_attack = attack_probability >= BINARY_ATTACK_THRESHOLD
+
+            resolved.append(
+                (is_attack, benign_probability, attack_probability, probability_map)
+            )
+
+            if is_attack:
+
+                attack_positions.append(position)
+
+        # =================================================
+        # STAGE 2
+        # ONE PREDICTION CALL FOR THE ATTACK ROWS ONLY
+        # =================================================
+
+        attack_types = {}
+
+        if attack_positions:
+
+            multiclass_X = prepare_batch(
+                [records[position] for position in attack_positions],
+                multiclass_feature_names,
+            )
+
+            multiclass_probabilities = multiclass_model.predict_proba(multiclass_X)
+
+            multiclass_classes = list(multiclass_model.classes_)
+
+            for offset, position in enumerate(attack_positions):
+
+                attack_types[position] = attack_type_from_row(
+                    multiclass_probabilities[offset], multiclass_classes
+                )
+
+        # =================================================
+        # RESPONSE
+        # =================================================
+
+        results = []
+
+        for position in range(len(records)):
+
+            is_attack, benign_probability, attack_probability, probability_map = (
+                resolved[position]
+            )
+
+            if is_attack:
+
+                prediction = "ATTACK"
+
+                confidence = attack_probability
+
+            else:
+
+                prediction = "BENIGN"
+
+                confidence = benign_probability
+
+            confidence = float(confidence)
+
+            (
+                attack_type,
+                attack_type_prediction,
+                attack_type_confidence,
+                attack_type_probabilities,
+            ) = attack_types.get(position, ("BENIGN", None, None, {}))
+
+            sorted_binary_probabilities = dict(
+                sorted(probability_map.items(), key=lambda item: item[1], reverse=True)
+            )
+
+            result = {
+                "index": position,
+                "prediction": prediction,
+                "is_attack": is_attack,
+                "confidence": round(confidence, 6),
+                "confidence_percent": round(confidence * 100, 2),
+                "risk_level": get_risk_level(prediction, confidence),
+                "attack_type": attack_type,
+                "attack_type_prediction": (attack_type_prediction),
+                "attack_type_confidence": (
+                    round(attack_type_confidence, 6)
+                    if attack_type_confidence is not None
+                    else None
+                ),
+                "probabilities": {
+                    label: round(probability, 6)
+                    for (label, probability) in sorted_binary_probabilities.items()
+                },
+            }
+
+            if include_type_probabilities:
+
+                result["attack_type_probabilities"] = attack_type_probabilities
+
+            results.append(result)
+
+        # Model, threshold and feature metadata is identical for every
+        # record, so it is reported once rather than repeated per result.
+        return jsonify(
+            {
+                "count": len(results),
+                "attack_count": len(attack_positions),
+                "benign_count": len(results) - len(attack_positions),
+                "models": {
+                    "binary": (BINARY_MODEL_PATH.name),
+                    "multiclass": (MULTICLASS_MODEL_PATH.name),
+                },
+                "thresholds": {
+                    "binary_attack": (BINARY_ATTACK_THRESHOLD),
+                    "unknown_attack_type": (UNKNOWN_TYPE_THRESHOLD),
+                },
+                "features": {
+                    "binary": (len(binary_feature_names)),
+                    "multiclass": (len(multiclass_feature_names)),
+                },
+                "results": results,
+            }
+        )
+
+    # =====================================================
+    # BAD REQUEST
+    # =====================================================
+
+    except ValueError as error:
+
+        return jsonify({"error": str(error)}), 400
+
+    # =====================================================
+    # INTERNAL ERROR
+    # =====================================================
+
+    except Exception as error:
+
+        log(f"Batch prediction error: {repr(error)}")
+
+        return jsonify({"error": ("Internal prediction error.")}), 500
+
+
 # =========================================================
 # STARTUP
 # =========================================================
@@ -833,6 +1130,8 @@ def initialize():
     print("GET  /api/model")
 
     print("POST /api/predict")
+
+    print("POST /api/predict/batch")
 
     print("=" * 70)
     print()
