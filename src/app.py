@@ -1,5 +1,6 @@
 from pathlib import Path
 import json
+import os
 
 import joblib
 import numpy as np
@@ -60,17 +61,23 @@ FEATURE_PATH = MODEL_DIR / "feature_names_production.joblib"
 # CONFIGURATION
 # =========================================================
 
-HOST = "127.0.0.1"
+# Read from the environment so a deployment never needs a code edit.
 
-PORT = 8086
+HOST = os.getenv("NETSENTRY_HOST", "127.0.0.1")
+
+PORT = int(os.getenv("NETSENTRY_PORT", "8086"))
+
+
+# Werkzeug's debugger runs arbitrary code and puts source in tracebacks.
+DEBUG = os.getenv("NETSENTRY_DEBUG", "").strip().lower() in ("1", "true", "yes")
 
 
 # Stage 1 threshold
-BINARY_ATTACK_THRESHOLD = 0.55
+BINARY_ATTACK_THRESHOLD = float(os.getenv("NETSENTRY_ATTACK_THRESHOLD", "0.55"))
 
 
 # Stage 2 threshold
-UNKNOWN_TYPE_THRESHOLD = 0.30
+UNKNOWN_TYPE_THRESHOLD = float(os.getenv("NETSENTRY_UNKNOWN_THRESHOLD", "0.30"))
 
 
 # =========================================================
@@ -819,6 +826,8 @@ def initialize():
 
     print(f"API: http://{HOST}:{PORT}")
 
+    print(f"Debug: {DEBUG}")
+
     print("GET  /health")
 
     print("GET  /api/model")
@@ -837,4 +846,4 @@ if __name__ == "__main__":
 
     initialize()
 
-    app.run(host=HOST, port=PORT, debug=True)
+    app.run(host=HOST, port=PORT, debug=DEBUG)
